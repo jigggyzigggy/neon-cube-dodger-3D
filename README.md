@@ -1,5 +1,10 @@
 # Neon Cube Dodger 3D
 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Threejs](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
 A fast-paced, 3D endless runner game built with [Three.js](https://threejs.org/) and [Vite](https://vitejs.dev/). Dodge neon red obstacles, survive as long as you can, and beat your high score!
 
 ![Game Preview](https://via.placeholder.com/800x400.png?text=Neon+Cube+Dodger)
