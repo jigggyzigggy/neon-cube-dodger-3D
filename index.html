@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Cube Dodger 3D</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="ui-layer">
+      <div id="score-container">Score: <span id="score">0</span></div>
+      
+      <div id="start-screen" class="panel">
+        <h1>Neon Cube Dodger</h1>
+        <p>Use <strong>Left/Right Arrows</strong> or <strong>A/D</strong> to dodge the red obstacles.</p>
+        <p>Tap sides of screen on mobile.</p>
+        <button id="start-btn">PLAY NOW</button>
+      </div>
+
+      <div id="game-over-screen" class="panel hidden">
+        <h1>GAME OVER</h1>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <button id="restart-btn">TRY AGAIN</button>
+      </div>
+    </div>
+    
+    <div id="app"></div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+:root {
+  --neon-blue: #00f3ff;
+  --neon-pink: #ff00ea;
+  --bg-color: #050510;
+  --glass-bg: rgba(10, 10, 25, 0.7);
+  --glass-border: rgba(0, 243, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  color: #fff;
+  overflow: hidden;
+  touch-action: none; /* Prevent scroll on mobile */
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+#ui-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass through to game if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#score-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 0 0 10px var(--neon-blue);
+  letter-spacing: 2px;
+}
+
+.panel {
+  pointer-events: auto;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.2), inset 0 0 20px rgba(255, 0, 234, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-width: 300px;
+}
+
+.panel h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 0, 234, 0.5);
+}
+
+.panel p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+button {
+  background: transparent;
+  color: var(--neon-blue);
+  border: 2px solid var(--neon-blue);
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.3), inset 0 0 10px rgba(0, 243, 255, 0.1);
+}
+
+button:hover {
+  background: var(--neon-blue);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--neon-blue), inset 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}
